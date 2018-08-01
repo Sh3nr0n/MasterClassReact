@@ -15,13 +15,12 @@ class ImageContainer extends Component {
                             return (
                             <Modal
                                 key={i} trigger={<Image src={image.src} alt="image" size='tiny' />}>
-                                <Modal.Header>Select a Photo</Modal.Header>
+                                <Modal.Header>This image id is : {image.imageId}</Modal.Header>
                                 <Modal.Content image>
                                     <Image wrapped size='medium' src={image.src} />
                                     <Modal.Description>
-                                        <Header>Default Profile Image</Header>
+                                        <Header>This is a header/title</Header>
                                         <p>{image.desc}</p>
-                                        <p>Is it okay to use this photo?</p>
                                     </Modal.Description>
                                 </Modal.Content>
                             </Modal>)
