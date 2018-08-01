@@ -1,5 +1,4 @@
 
 # TO DO
-- Add a button to add a new image 
-- Add the description under the picture
+- Add the description under the picture => tricky to do...
 - Create a router with React router for the menu sections
