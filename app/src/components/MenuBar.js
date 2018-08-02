@@ -25,7 +25,7 @@ class MenuBar extends Component {
             active={activeItem === "inbox"}
             onClick={this.handleItemClick}
           >
-            Inbox
+            Galerie
           </Menu.Item>
 
           <Menu.Item
@@ -33,7 +33,7 @@ class MenuBar extends Component {
             active={activeItem === "spam"}
             onClick={this.handleItemClick}
           >
-            Spam
+            Articles
           </Menu.Item>
 
           <Menu.Item
@@ -41,7 +41,7 @@ class MenuBar extends Component {
             active={activeItem === "updates"}
             onClick={this.handleItemClick}
           >
-            Updates
+            Auteur
           </Menu.Item>
         </Menu>
       </Fragment>

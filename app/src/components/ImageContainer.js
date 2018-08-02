@@ -11,16 +11,56 @@ import {
 } from "semantic-ui-react";
 
 class ImageContainer extends Component {
-  constructor(props) {
-    super(props);
+  constructor(props){
+    super(props)
     this.state = {
-      urlPreview: ""
-    };
+      openModal:false,
+    }
   }
+
+handleOpenModal = () => {
+  console.log('Modal opened')
+  this.setState({
+    openModal:true
+  })
+}
+
+handleCloseModal = () => {
+  console.log('Modal closed')
+  this.setState({
+    openModal:false
+  })
+}
 
   render() {
     const { images } = this.props;
     console.log("images are", images);
+
+    const imageModal = (
+      <Modal
+        open = {this.state.openModal}
+        onClose = {this.handleCloseModal}
+      >
+       <Modal.Header>Selectionnez une Image</Modal.Header>
+       <Modal.Content image>
+         <Modal.Description>
+           <Form>
+             <Form.Field>
+               <label>URL</label>
+               <input placeholder="URL de l'image" />
+             </Form.Field>
+             <Form.Field>
+               <label>description</label>
+               <input placeholder="Entrez une description" />
+             </Form.Field>
+             <Button type="submit" floated="right">
+               Valider
+             </Button>
+           </Form>
+         </Modal.Description>
+       </Modal.Content>
+     </Modal>
+)
 
     return (
       <Fragment>
@@ -47,9 +87,8 @@ class ImageContainer extends Component {
                 );
               })}
             </Image.Group>
-            <Modal
-              trigger={
                 <Button
+                  onClick={this.handleOpenModal}
                   icon
                   circular
                   floated="right"
@@ -58,27 +97,7 @@ class ImageContainer extends Component {
                 >
                   <Icon name="plus" size="large" color="white" />
                 </Button>
-              }
-            >
-              <Modal.Header>Selectionnez une Image</Modal.Header>
-              <Modal.Content image>
-                <Modal.Description>
-                  <Form>
-                    <Form.Field>
-                      <label>URL</label>
-                      <input placeholder="URL de l'image" />
-                    </Form.Field>
-                    <Form.Field>
-                      <label>description</label>
-                      <input placeholder="Entrez une description" />
-                    </Form.Field>
-                    <Button type="submit" floated="right">
-                      Valider
-                    </Button>
-                  </Form>
-                </Modal.Description>
-              </Modal.Content>
-            </Modal>
+                {imageModal}
           </Segment>
         </Container>
       </Fragment>

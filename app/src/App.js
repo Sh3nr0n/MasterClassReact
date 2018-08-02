@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import './App.css';
 import ImageContainer  from './components/ImageContainer'
 import MenuBar  from './components/MenuBar'
 
