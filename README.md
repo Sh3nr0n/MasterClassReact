@@ -13,4 +13,13 @@
 ## Bonus
  - Créer une barre de Menu et l'intégrer au composant App
  - Sortir le bouton d'ajout d'images de la "Modal" et créer deux méthodes dans le container : une méthode qui va ouvrir la "Modal", une méthode qui va la fermer
+
+## Ressources
+ - https://reactjs.org/
+ - https://react.semantic-ui.com/
+ - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
+ - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+ - https://www.youtube.com/playlist?list=PL55RiY5tL51oyA8euSROLjMFZbXaV7skS
+
+ Happy Hacking ;)
  
