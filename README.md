@@ -14,7 +14,7 @@
 
 ## Bonus
  - Créer une barre de Menu et l'intégrer au composant **App**
- - Sortir le bouton d'ajout d'images du composant **Modal** et créer deux méthodes dans le **container** : une méthode qui va ouvrir la **Modal**, une méthode qui va la fermer
+ - Sortir le bouton d'ajout d'images du composant **Modal** de base de *react-semantic* et créer deux méthodes dans le **container** : une méthode qui va ouvrir le composant **Modal**, une méthode qui va le fermer (*tips* : utiliser les *props* **open** et **onClose**)
 
 ## Ressources
  - https://reactjs.org/
