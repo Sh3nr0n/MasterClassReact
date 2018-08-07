@@ -9,10 +9,12 @@
  - Au clic sur une image l'afficher dans une fenêtre de dialogue (**Modal**) avec sa description et son identifiant
  - Créer un bouton pour ajouter de nouvelles images
  - Au clic sur ce bouton, ouvrir une fenêtre de dialogue qui permet de saisir une URL, une description pour une image et un bouton valider
+ - Créer la méthode qui va gérer le **submit** du formulaire et afficher le message **"form has been submitted"** dans la console.
+
 
 ## Bonus
  - Créer une barre de Menu et l'intégrer au composant **App**
- - Sortir le bouton d'ajout d'images de la **Modal** et créer deux méthodes dans le **container** : une méthode qui va ouvrir la **Modal**, une méthode qui va la fermer
+ - Sortir le bouton d'ajout d'images du composant **Modal** et créer deux méthodes dans le **container** : une méthode qui va ouvrir la **Modal**, une méthode qui va la fermer
 
 ## Ressources
  - https://reactjs.org/
