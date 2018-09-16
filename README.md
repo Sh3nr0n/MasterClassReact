@@ -1,11 +1,12 @@
 # Etapes  exercice #1 : Créer une galerie d'images
 
  - Créer un dossier **components** qui va recevoir les composants *React*
- - Créer un **container** en utilisant le framework *semantic-ui-react*
+ - Créer un **container** en utilisant le framework *semantic-ui-react*  
  /!\ Créer un composant en utilisant une classe
  - Intégrer le container à l'**App**
  - Créer dans l'**App** un tableau (*array*) "**imageList**" qui va recevoir une liste d'images. Chaque image à : un identifiant, une description, une url qui fonctionne.
- Vous pouvez vous aider du site *Lorem picsum* (https://picsum.photos/)
+ 
+   Vous pouvez vous aider du site *Lorem picsum* (https://picsum.photos/)
  - Passer la liste d'images en tant que "**props**" de l'**App** vers le **container**
  - Afficher chaque image dans le **container** 
  - Au clic sur une image l'afficher dans une fenêtre de dialogue (**Modal**) avec sa description et son identifiant
