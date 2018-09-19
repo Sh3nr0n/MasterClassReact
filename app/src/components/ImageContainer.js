@@ -15,7 +15,9 @@ class ImageContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      openModal: false
+      openModal: false,
+      imageSrc :'',
+      imageDesc:''
     };
   }
 
@@ -29,13 +31,29 @@ class ImageContainer extends Component {
   handleCloseModal = () => {
     console.log("Modal closed");
     this.setState({
-      openModal: false
+      openModal: false,
     });
   };
 
   handleImageSubmit = () => {
     console.log("form has been submitted");
+    console.log("image src is %s , image desc is %s", this.state.imageSrc, this.state.imageDesc)
+    this.setState({
+      openModal: false,
+    });
   };
+
+  handleUrlChange = (event) => {
+    this.setState({
+      imageSrc:event.target.value
+    })
+  }
+
+  handleDescChange = (event) => {
+    this.setState({
+      imageDesc:event.target.value
+    })
+  }
 
   render() {
     const { images } = this.props;
@@ -49,7 +67,11 @@ class ImageContainer extends Component {
             <Form onSubmit={this.handleImageSubmit} error>
               <Form.Field>
                 <label>URL</label>
-                <input placeholder="URL de l'image" />
+                <input 
+                  placeholder="URL de l'image" 
+                  value={this.state.imageSrc}
+                  onChange={this.handleUrlChange}    
+                />
               </Form.Field>
               <Message
                 error
@@ -58,7 +80,11 @@ class ImageContainer extends Component {
               />
               <Form.Field>
                 <label>description</label>
-                <input placeholder="Entrez une description" />
+                <input 
+                  placeholder="Entrez une description"
+                  value={this.state.imageDesc}
+                  onChange={this.handleDescChange}
+                />
               </Form.Field>
               <Button type="submit" floated="right">
                 Valider
